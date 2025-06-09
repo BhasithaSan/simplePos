@@ -6,6 +6,7 @@ import type { ProductWithQuantityProp } from "../../Props/productProp";
 import CurrentProduct from "../Product/CurrentProduct";
 import { Dashboard } from "./DashBoardCard/Dashboard";
 import PopupProduct from "../Product/PopupProduct";
+import AddProduct from "../Product/AddProduct";
 
 const ProcessOrder = () => {
 
@@ -57,8 +58,11 @@ const ProcessOrder = () => {
           >
             <PopupProduct />
           </div>
+
+          
         </>
       )}
+      <AddProduct/>
     </div>
 
   );

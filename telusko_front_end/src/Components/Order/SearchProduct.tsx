@@ -45,10 +45,15 @@ const SearchProduct=()=>{
       }
       }
 
-    const searchProduct = async (id: string) :Promise<ProductProp> => {
-      const response = await axiosInstance.get<ProductProp>(`/product/${id}`);
-      return response.data;
-    };
+    const searchProduct = async (id: string): Promise<ProductProp> => {
+        const response = await axiosInstance.get<ProductProp>(`/product/${id}`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+          }
+  });
+  return response.data;
+};
+
 
 return <>
     <div className="row">

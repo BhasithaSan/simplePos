@@ -10,17 +10,15 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin
 @RequestMapping("api/")
 public class ProductController {
-
-
 
     @Autowired
     ProductService productService;
 
     @GetMapping("products")
     public List<Product> getAllproducts(){
+        System.out.println("Hey");
         return productService.getProducts();
     }
     @GetMapping("product/{id}")
